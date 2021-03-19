@@ -1,30 +1,15 @@
-# Packula template repo
-
-<!-- Uncomment this section
+# Packula router path extras
 
 [![Current version][badge-version-image]][badge-version-link]
 [![Bundle size][badge-bundle-image]][badge-bundle-link]
 [![Build status][badge-build-image]][badge-build-link]
 [![Test coverage][badge-coverage-image]][badge-coverage-link]
 
-[badge-build-image]: https://img.shields.io/github/workflow/status/packula/GITHUB_REPO_NAME/CI?style=for-the-badge
-[badge-build-link]: https://github.com/packula/GITHUB_REPO_NAME/actions/workflows/ci.yml
-[badge-bundle-image]: https://img.shields.io/bundlephobia/minzip/@packula/GITHUB_REPO_NAME?style=for-the-badge
-[badge-bundle-link]: https://bundlephobia.com/result?p=@packula/GITHUB_REPO_NAME
-[badge-coverage-image]: https://img.shields.io/codecov/c/gh/packula/GITHUB_REPO_NAME?style=for-the-badge
-[badge-coverage-link]: https://codecov.io/gh/packula/GITHUB_REPO_NAME
-[badge-version-image]: https://img.shields.io/npm/v/@packula/GITHUB_REPO_NAME?label=%40packula%2FGITHUB_REPO_NAME&logo=npm&style=for-the-badge
-[badge-version-link]: https://npmjs.com/package/@packula/GITHUB_REPO_NAME
-
--->
-
-This repository is a template for Packula TypeScript projects. After creating a
-repository from this template, follow these steps:
-
-- Uncomment the badges in this `README.md` file
-- Replace the string `GITHUB_REPO_NAME` in all files with the actual repo name.
-- Search for `REPLACE_ME` in all files to find areas that need manual input.
-- On the settings page (https://github.com/packula/GITHUB_REPO_NAME/settings):
-  - Disable the "Wikis" feature
-  - Disable the "Projects" feature
-  - Enable "Automatically delete head branches" under the "Merge button" section
+[badge-build-image]: https://img.shields.io/github/workflow/status/packula/router-path-extras/CI?style=for-the-badge
+[badge-build-link]: https://github.com/packula/router-path-extras/actions/workflows/ci.yml
+[badge-bundle-image]: https://img.shields.io/bundlephobia/minzip/@packula/router-path-extras?style=for-the-badge
+[badge-bundle-link]: https://bundlephobia.com/result?p=@packula/router-path-extras
+[badge-coverage-image]: https://img.shields.io/codecov/c/gh/packula/router-path-extras?style=for-the-badge
+[badge-coverage-link]: https://codecov.io/gh/packula/router-path-extras
+[badge-version-image]: https://img.shields.io/npm/v/@packula/router-path-extras?label=%40packula%2Frouter-path-extras&logo=npm&style=for-the-badge
+[badge-version-link]: https://npmjs.com/package/@packula/router-path-extras
