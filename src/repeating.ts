@@ -1,5 +1,5 @@
 import {Param} from '@packula/router-path'
-import {escape, unwrap} from '@packula/regexp'
+import {escape} from '@packula/regexp'
 
 export function any<Name extends string> (
   name: Name,
@@ -32,7 +32,7 @@ export function some<Name extends string> (
 type SomeParamResult = { [0]: string } & Partial<string[]>
 
 function arrayParamPattern (exp: RegExp, prefix: string, separator: string): string {
-  const segmentExp = `(?:${unwrap(exp)})`
+  const segmentExp = `(?:${exp.source})`
 
   return `(?:${escape(prefix)}(${segmentExp}(?:${escape(separator)}${segmentExp})*))`
 }

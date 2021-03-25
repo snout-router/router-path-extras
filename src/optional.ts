@@ -1,5 +1,5 @@
 import {AnyParam, NormalizeParam, Param, param, ParamArg, ParamOrString} from '@packula/router-path'
-import {escape, unwrap} from '@packula/regexp'
+import {escape} from '@packula/regexp'
 
 export function optional<InnerParam extends ParamOrString> (
   literals: TemplateStringsArray,
@@ -18,7 +18,7 @@ export function optional<InnerParam extends ParamOrString> (
   // eslint-disable-next-line @typescript-eslint/consistent-type-assertions
   return {
     name,
-    exp: new RegExp(`(?:${escape(start)}${unwrap(exp)}${escape(end)})?`),
+    exp: new RegExp(`(?:${escape(start)}${exp.source}${escape(end)})?`),
     build: (arg: Arg) => arg == null ? '' : `${start}${build(arg)}${end}`,
     parse: match => match === '' ? undefined : parse(match),
   } as OptionalParam<NormalizeParam<InnerParam>>
