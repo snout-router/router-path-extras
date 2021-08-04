@@ -1,5 +1,5 @@
-import {Param} from '@packula/router-path'
-import {escape} from '@packula/regexp'
+import {Param} from '@snout/router-path'
+import {escape} from '@snout/regexp'
 
 export function any<Name extends string> (
   name: Name,

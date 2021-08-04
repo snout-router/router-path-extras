@@ -1,10 +1,10 @@
 {
-  "name": "@packula/router-path-extras",
+  "name": "@snout/router-path-extras",
   "version": "0.0.0",
-  "description": "Additional parameter types for Packula router path",
-  "repository": "packula/router-path-extras",
-  "bugs": "https://github.com/packula/router-path-extras/issues",
-  "homepage": "https://packula.dev",
+  "description": "Additional parameter types for Snout router path",
+  "repository": "snout-router/router-path-extras",
+  "bugs": "https://github.com/snout-router/router-path-extras/issues",
+  "homepage": "https://snout.dev",
   "author": "Erin Millard <ezzatron@gmail.com>",
   "license": "MIT",
   "publishConfig": {
@@ -24,17 +24,17 @@
     "prepare": "rollup --config rollup.config.js"
   },
   "dependencies": {
-    "@packula/regexp": "^0.2.0"
+    "@snout/regexp": "^0.2.1"
   },
   "peerDependencies": {
-    "@packula/router-path": "^0.2.0"
+    "@snout/router-path": "^0.2.2"
   },
   "devDependencies": {
-    "@packula/eslint-config": "^1.1.1",
-    "@packula/jest-config": "^1.0.1",
-    "@packula/rollup-config": "^1.1.1",
-    "@packula/router-path": "^0.2.0",
-    "@packula/tsconfig": "^1.0.2",
+    "@snout/eslint-config": "^1.1.2",
+    "@snout/jest-config": "^1.0.2",
+    "@snout/rollup-config": "^1.1.2",
+    "@snout/router-path": "^0.2.2",
+    "@snout/tsconfig": "^1.0.3",
     "@typescript-eslint/eslint-plugin": "^4.18.0",
     "@typescript-eslint/parser": "^4.18.0",
     "codecov": "^3.0.2",

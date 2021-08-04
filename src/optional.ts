@@ -1,5 +1,5 @@
-import {AnyParam, NormalizeParam, Param, param, ParamArg, ParamOrString} from '@packula/router-path'
-import {escape} from '@packula/regexp'
+import {AnyParam, NormalizeParam, Param, param, ParamArg, ParamOrString} from '@snout/router-path'
+import {escape} from '@snout/regexp'
 
 export function optional<InnerParam extends ParamOrString> (
   literals: TemplateStringsArray,

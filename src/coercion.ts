@@ -1,4 +1,4 @@
-import {Param} from '@packula/router-path'
+import {Param} from '@snout/router-path'
 
 export function int<Name extends string> (name: Name): Param<Name, number> {
   return {

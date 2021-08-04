@@ -1,4 +1,4 @@
-import {path} from '@packula/router-path'
+import {path} from '@snout/router-path'
 
 import {int} from '../../src/coercion'
 
