@@ -1,0 +1,6 @@
+{
+  "extends": "@snout/tsconfig",
+  "compilerOptions": {
+    "noUncheckedIndexedAccess": true
+  }
+}

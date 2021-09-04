@@ -6,12 +6,12 @@ export function any<Name extends string> (
   exp: RegExp = /[^/]+/,
   separator: string = '/',
   prefix: string = separator,
-): Param<Name, string[], Partial<string[]>> {
+): Param<Name, string[]> {
   return {
     name,
     exp: new RegExp(`${arrayParamPattern(exp, prefix, separator)}?`),
-    build: arg => arg.length > 0 ? `${prefix}${arg.join(separator)}` : '',
     parse: match => match === '' ? [] : match.split(separator),
+    format: arg => arg.length > 0 ? `${prefix}${arg.join(separator)}` : '',
   }
 }
 
@@ -20,16 +20,16 @@ export function some<Name extends string> (
   exp: RegExp = /[^/]+/,
   separator: string = '/',
   prefix: string = separator,
-): Param<Name, string[], SomeParamResult> {
+): Param<Name, SomeArg> {
   return {
     name,
     exp: new RegExp(arrayParamPattern(exp, prefix, separator)),
-    build: arg => `${prefix}${arg.join(separator)}`,
-    parse: match => match.split(separator) as SomeParamResult,
+    parse: match => match.split(separator) as SomeArg,
+    format: arg => `${prefix}${arg.join(separator)}`,
   }
 }
 
-type SomeParamResult = { [0]: string } & Partial<string[]>
+type SomeArg = [string, ...string[]]
 
 function arrayParamPattern (exp: RegExp, prefix: string, separator: string): string {
   const segmentExp = `(?:${exp.source})`

@@ -1,18 +1,10 @@
-import {param, path} from '@snout/router-path'
+import {normalizeParam, path} from '@snout/router-path'
 
 import {int} from '../../src/coercion'
 import {optional} from '../../src/optional'
 
 describe('optional()', () => {
   it('should allow building with or without a defined arg', () => {
-    const subject = path`/a/${'p1'}${optional`/b/${param('p2')}/c`}/d`
-
-    expect(subject.build({p1: 'x', p2: 'y'})).toBe('/a/x/b/y/c/d')
-    expect(subject.build({p1: 'x', p2: undefined})).toBe('/a/x/d')
-    expect(subject.build({p1: 'x'})).toBe('/a/x/d')
-  })
-
-  it('should allow building when the inner param is specified as a string', () => {
     const subject = path`/a/${'p1'}${optional`/b/${'p2'}/c`}/d`
 
     expect(subject.build({p1: 'x', p2: 'y'})).toBe('/a/x/b/y/c/d')
@@ -20,8 +12,17 @@ describe('optional()', () => {
     expect(subject.build({p1: 'x'})).toBe('/a/x/d')
   })
 
+  it('should allow building when the inner param is specified as a parameter object', () => {
+    const p2 = normalizeParam('p2')
+    const subject = path`/a/${'p1'}${optional`/b/${p2}/c`}/d`
+
+    expect(subject.build({p1: 'x', p2: 'y'})).toBe('/a/x/b/y/c/d')
+    expect(subject.build({p1: 'x', p2: undefined})).toBe('/a/x/d')
+    expect(subject.build({p1: 'x'})).toBe('/a/x/d')
+  })
+
   it('should match with or without the optional section', () => {
-    const subject = path`/a/${'p1'}${optional`/b/${param('p2')}/c`}/d`
+    const subject = path`/a/${'p1'}${optional`/b/${'p2'}/c`}/d`
 
     expect(subject.match('/a/x/b/y/c/d')).toStrictEqual({p1: 'x', p2: 'y'})
     expect(subject.match('/a/x/d')).toStrictEqual({p1: 'x', p2: undefined})

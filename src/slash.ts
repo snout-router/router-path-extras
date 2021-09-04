@@ -4,8 +4,8 @@ export function createSlash<Name extends string> (name: Name): Param<Name, boole
   return {
     name,
     exp: /(\/)?/,
-    build: arg => arg ? '/' : '',
     parse: match => match !== '',
+    format: arg => arg ? '/' : '',
   }
 }
 
