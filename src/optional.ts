@@ -5,8 +5,8 @@ export function optional<InnerParam extends ParamOrString> (
   literals: TemplateStringsArray,
   inner: InnerParam,
 ): OptionalParam<NormalizeParam<InnerParam>> {
-  type NormalizedParam = NormalizeParam<InnerParam>
-  type Arg = ParamArg<OptionalParam<NormalizedParam>>
+  type T = OptionalParam<NormalizeParam<InnerParam>>
+  type Arg = ParamArg<T>
 
   if (literals.length !== 2) throw new Error('Invalid param count')
 
@@ -19,7 +19,7 @@ export function optional<InnerParam extends ParamOrString> (
     exp: new RegExp(`(?:${escape(start)}${exp.source}${escape(end)})?`),
     parse: match => match === '' ? undefined : parse(match),
     format: (arg: Arg) => arg == null ? '' : `${start}${format(arg)}${end}`,
-  } as OptionalParam<NormalizeParam<InnerParam>>
+  } as T
 }
 
 type OptionalParam<InnerParam extends AnyParam> = InnerParam extends Param<infer Name, infer Arg>
