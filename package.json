@@ -2,6 +2,12 @@
   "name": "@snout/router-path-extras",
   "version": "0.0.0",
   "description": "Additional parameter types for Snout router path",
+  "keywords": [
+    "path",
+    "route",
+    "router",
+    "routing"
+  ],
   "repository": "snout-router/router-path-extras",
   "bugs": "https://github.com/snout-router/router-path-extras/issues",
   "homepage": "https://snout.dev",
@@ -13,6 +19,10 @@
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "typings": "dist/index.d.ts",
+  "exports": {
+    "import": "./dist/index.es.js",
+    "require": "./dist/index.js"
+  },
   "sideEffects": false,
   "files": [
     "/dist/"
