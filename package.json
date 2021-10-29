@@ -36,7 +36,7 @@
     "size-limit-clean": "rm -rf artifacts/dist"
   },
   "dependencies": {
-    "@snout/regexp": "^0.2.2"
+    "@snout/regexp": "^0.3.0"
   },
   "peerDependencies": {
     "@snout/router-path": "^0.6.0"
