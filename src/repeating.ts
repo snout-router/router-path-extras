@@ -1,5 +1,5 @@
-import { Param } from "@snout/router-path";
 import { escape } from "@snout/regexp";
+import { Param } from "@snout/router-path";
 
 export function any<Name extends string>(
   name: Name,

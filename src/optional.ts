@@ -1,3 +1,4 @@
+import { escape } from "@snout/regexp";
 import {
   AnyParam,
   normalizeParam,
@@ -6,7 +7,6 @@ import {
   ParamArg,
   ParamOrString,
 } from "@snout/router-path";
-import { escape } from "@snout/regexp";
 
 export function optional<InnerParam extends ParamOrString>(
   literals: TemplateStringsArray,

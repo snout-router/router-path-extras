@@ -1,5 +1,4 @@
 import { path } from "@snout/router-path";
-
 import { some } from "../../src/repeating";
 
 describe("some()", () => {

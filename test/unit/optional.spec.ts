@@ -1,5 +1,4 @@
 import { normalizeParam, path } from "@snout/router-path";
-
 import { int } from "../../src/coercion";
 import { optional } from "../../src/optional";
 

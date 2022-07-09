@@ -1,5 +1,4 @@
 import { path } from "@snout/router-path";
-
 import { int } from "../../src/coercion";
 
 describe("int()", () => {
