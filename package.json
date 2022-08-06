@@ -50,8 +50,5 @@
     "prettier-plugin-organize-imports": "^3.0.0",
     "size-limit": "^8.0.0",
     "typescript": "^4.4.3"
-  },
-  "resolutions": {
-    "yargs-parser": "21.0.1"
   }
 }
