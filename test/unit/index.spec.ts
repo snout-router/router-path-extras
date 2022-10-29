@@ -1,8 +1,8 @@
-import { int } from "../../src/coercion";
-import * as index from "../../src/index";
-import { optional } from "../../src/optional";
-import { any, some } from "../../src/repeating";
-import { createSlash, slash } from "../../src/slash";
+import { int } from "../../src/coercion.js";
+import * as index from "../../src/index.js";
+import { optional } from "../../src/optional.js";
+import { any, some } from "../../src/repeating.js";
+import { createSlash, slash } from "../../src/slash.js";
 
 describe("module index", () => {
   it("should provide access to int()", () => {

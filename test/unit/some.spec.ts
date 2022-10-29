@@ -1,5 +1,5 @@
 import { path } from "@snout/router-path";
-import { some } from "../../src/repeating";
+import { some } from "../../src/repeating.js";
 
 describe("some()", () => {
   it("should allow building from an array", () => {

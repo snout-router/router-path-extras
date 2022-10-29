@@ -20,7 +20,11 @@
   "main": "artifacts/dist/index.js",
   "types": "artifacts/dist/index.d.ts",
   "exports": {
-    ".": "./artifacts/dist/index.js"
+    ".": {
+      "types": "./artifacts/dist/index.d.ts",
+      "import": "./artifacts/dist/index.js",
+      "default": "./artifacts/dist/index.js"
+    }
   },
   "sideEffects": false,
   "files": [
@@ -35,7 +39,7 @@
     "size-limit-clean": "rm -rf artifacts/dist"
   },
   "dependencies": {
-    "@snout/regexp": "^0.3.0"
+    "@snout/regexp": "^0.3.2"
   },
   "peerDependencies": {
     "@snout/router-path": "^0.6.0"
@@ -43,12 +47,12 @@
   "devDependencies": {
     "@size-limit/preset-small-lib": "^8.0.0",
     "@snout/eslint-config": "^3.2.2",
-    "@snout/jest-config": "^2.1.0",
+    "@snout/jest-config": "^3.0.0",
     "@snout/router-path": "^0.7.2",
-    "@snout/tsconfig": "^2.0.0",
+    "@snout/tsconfig": "^3.0.0",
     "prettier": "^2.7.1",
     "prettier-plugin-organize-imports": "^3.0.0",
     "size-limit": "^8.0.0",
-    "typescript": "^4.4.3"
+    "typescript": "^4.8.4"
   }
 }

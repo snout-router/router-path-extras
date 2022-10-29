@@ -1,5 +1,5 @@
 import { path } from "@snout/router-path";
-import { int } from "../../src/coercion";
+import { int } from "../../src/coercion.js";
 
 describe("int()", () => {
   it("should allow building from a number", () => {

@@ -1,6 +1,6 @@
 import { normalizeParam, path } from "@snout/router-path";
-import { int } from "../../src/coercion";
-import { optional } from "../../src/optional";
+import { int } from "../../src/coercion.js";
+import { optional } from "../../src/optional.js";
 
 describe("optional()", () => {
   it("should allow building with or without a defined arg", () => {

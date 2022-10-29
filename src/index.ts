@@ -1,4 +1,4 @@
-export { int } from "./coercion";
-export { optional } from "./optional";
-export { any, some } from "./repeating";
-export { createSlash, slash } from "./slash";
+export { int } from "./coercion.js";
+export { optional } from "./optional.js";
+export { any, some } from "./repeating.js";
+export { createSlash, slash } from "./slash.js";

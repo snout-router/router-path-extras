@@ -1,5 +1,5 @@
 import { path } from "@snout/router-path";
-import { createSlash, slash } from "../../src/slash";
+import { createSlash, slash } from "../../src/slash.js";
 
 describe("createSlash()", () => {
   it("should allow building with a boolean indicating whether to include the slash", () => {
