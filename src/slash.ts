@@ -1,7 +1,7 @@
 import { Param } from "@snout/router-path";
 
 export function createSlash<Name extends string>(
-  name: Name
+  name: Name,
 ): Param<Name, boolean> {
   return {
     name,

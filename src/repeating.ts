@@ -5,7 +5,7 @@ export function any<Name extends string>(
   name: Name,
   exp = /[^/]+/,
   separator = "/",
-  prefix: string = separator
+  prefix: string = separator,
 ): Param<Name, string[]> {
   return {
     name,
@@ -19,7 +19,7 @@ export function some<Name extends string>(
   name: Name,
   exp = /[^/]+/,
   separator = "/",
-  prefix: string = separator
+  prefix: string = separator,
 ): Param<Name, SomeArg> {
   return {
     name,
@@ -34,11 +34,11 @@ type SomeArg = [string, ...string[]];
 function arrayParamPattern(
   exp: RegExp,
   prefix: string,
-  separator: string
+  separator: string,
 ): string {
   const segmentExp = `(?:${exp.source})`;
 
   return `(?:${escape(prefix)}(${segmentExp}(?:${escape(
-    separator
+    separator,
   )}${segmentExp})*))`;
 }

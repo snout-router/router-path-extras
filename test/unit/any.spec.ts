@@ -11,10 +11,10 @@ describe("any()", () => {
 
   it("should allow building with alternate expressions, separators, and prefixes", () => {
     expect(
-      path`/a${any("p1", /x/, "<sep>")}/b`.build({ p1: ["wx", "yz"] })
+      path`/a${any("p1", /x/, "<sep>")}/b`.build({ p1: ["wx", "yz"] }),
     ).toBe("/a<sep>wx<sep>yz/b");
     expect(
-      path`/a${any("p1", /x/, "<sep>", "<pre>")}/b`.build({ p1: ["wx", "yz"] })
+      path`/a${any("p1", /x/, "<sep>", "<pre>")}/b`.build({ p1: ["wx", "yz"] }),
     ).toBe("/a<pre>wx<sep>yz/b");
   });
 

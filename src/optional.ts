@@ -10,7 +10,7 @@ import {
 
 export function optional<InnerParam extends ParamOrString>(
   literals: TemplateStringsArray,
-  inner: InnerParam
+  inner: InnerParam,
 ): OptionalParam<NormalizeParam<InnerParam>> {
   type T = OptionalParam<NormalizeParam<InnerParam>>;
   type Arg = ParamArg<T>;
