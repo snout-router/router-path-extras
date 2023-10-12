@@ -42,7 +42,7 @@
     "@snout/regexp": "^0.3.2"
   },
   "peerDependencies": {
-    "@snout/router-path": "^0.6.0"
+    "@snout/router-path": "^0.7.0"
   },
   "devDependencies": {
     "@size-limit/preset-small-lib": "^9.0.0",
