@@ -30,9 +30,7 @@ export function optional<InnerParam extends ParamOrString>(
   } as T;
 }
 
-type OptionalParam<InnerParam extends AnyParam> = InnerParam extends Param<
-  infer Name,
-  infer Arg
->
-  ? Param<Name, Arg | undefined>
-  : AnyParam;
+type OptionalParam<InnerParam extends AnyParam> =
+  InnerParam extends Param<infer Name, infer Arg>
+    ? Param<Name, Arg | undefined>
+    : AnyParam;
